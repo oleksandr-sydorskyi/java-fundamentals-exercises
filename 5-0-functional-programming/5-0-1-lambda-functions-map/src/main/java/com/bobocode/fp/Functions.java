@@ -27,9 +27,33 @@ public class Functions {
      */
     public static FunctionMap<Integer, Integer> intFunctionMap() {
         FunctionMap<Integer, Integer> intFunctionMap = new FunctionMap<>();
-
+        intFunctionMap.addFunction("abs", Functions::abs);
+        intFunctionMap.addFunction("sgn", Functions::sgn);
+        intFunctionMap.addFunction("increment", Functions::increment);
+        intFunctionMap.addFunction("decrement", Functions::decrement);
+        intFunctionMap.addFunction("square", Functions::square);
         // todo: according to the javadoc add functions using lambda expression
 
         return intFunctionMap;
+    }
+
+    private static Integer square(Integer integer) {
+        return (int) Math.pow(integer, 2);
+    }
+
+    private static Integer decrement(Integer integer) {
+        return Math.decrementExact(integer);
+    }
+
+    private static Integer increment(Integer integer) {
+        return Math.incrementExact(integer);
+    }
+
+    private static Integer sgn(Integer integer) {
+        return (int) Math.signum(integer);
+    }
+
+    private static Integer abs(Integer integer) {
+        return Math.abs(integer);
     }
 }
