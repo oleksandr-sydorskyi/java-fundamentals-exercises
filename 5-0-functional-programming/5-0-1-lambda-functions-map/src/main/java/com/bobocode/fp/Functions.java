@@ -33,7 +33,6 @@ public class Functions {
         intFunctionMap.addFunction("decrement", Functions::decrement);
         intFunctionMap.addFunction("square", Functions::square);
         // todo: according to the javadoc add functions using lambda expression
-
         return intFunctionMap;
     }
 
